@@ -1,7 +1,31 @@
 import React, { Component } from 'react';
 import './CheckoutOrder.css';
+import edamame from './edamame.jpg'
+import chirashi from './chirashi-sushi.jpg'
+import seaweed from './seaweed-salad.jpg'
 
-const CheckoutOrder = ({ selected }) => {
+const CheckoutOrder = ({}) => {
+    const selected = [
+        {
+          name: 'Edamame',
+          price: 4,
+          count: 1,
+          img: edamame
+        },
+        {
+          name: 'Chirashi Sushi',
+          price: 4,
+          count: 1,
+          img: chirashi
+        },
+        {
+          name: 'Seaweed Salad',
+          price: 4,
+          count: 1,
+          img: seaweed
+        }
+      ]
+      
     const products = selected.map((product, index) => {
         return (
             <tr key={index}>
