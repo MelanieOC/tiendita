@@ -9,13 +9,13 @@ text-decoration:none;
 color:#000;
 }
 
-ul, ol{
+/* ul, ol{
 list-style:none;
 }
 
 img{
 border:0;
-}
+} */
 
 body {
     font: 75% 'Droid Sans', sans-serif;
@@ -24,11 +24,11 @@ body {
     
 }
 
-h1, h2, h3, #main-nav, #main-nav li, ul, ul li {
+/* h1, h2, h3, #main-nav, #main-nav li, ul, ul li {
     list-style: none outside none;
     margin: 0;
     padding: 0;
-}
+} */
 
 body .k-listview {
     border: 0;
@@ -135,7 +135,7 @@ h1 a{
     top: 12px;
 }
 
-#arrow{
+/* #arrow{
     position: absolute;
     content:" ";
     display: block;
@@ -195,9 +195,9 @@ h3{
     color: #bababa;
     font-size: 10px;
     text-transform: uppercase;
-}
+} */
 
-#shopping-cart{
+/* #shopping-cart{
     position: relative;
     text-align: right;
     float: right;
@@ -428,9 +428,9 @@ h3{
     -moz-transition: all .3s;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
-}
+} */
 
-.total-price{
+/* .total-price{
     font-size: 30px;
     color: #ffffff;
     margin-bottom: 9px;
@@ -917,7 +917,7 @@ table tbody td:first-child + td + td p{
     -moz-transition: all .3s;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
-}
+} */
 
 
 /*footer section*/

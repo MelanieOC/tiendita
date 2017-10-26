@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Body.css';
 
-const Body = ()=> {
-  
-     return (
+const Body = () => {
 
- <div id="application">
+    return (
+
+        <div id="application">
             <div>
                 <div id="wrapper">
                     <div id="header">
@@ -29,16 +29,16 @@ const Body = ()=> {
                             </div>
 
                         </section>
-                        
+
                     </div>
                     <div id="footer">
                         <p>"Learn more about Kendo UI"
                         <sup>®</sup>
-                        "SPA at"
+                            "SPA at"
                         <a href="http://docs.telerik.com/kendo-ui/getting-started/framework/spa/overview">docs.telerik.com/kendo-ui</a>
-                        "."
+                            "."
                         </p>
-                        
+
                         <p>Copyright © 2017, Progress Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.</p>
                     </div>
                 </div>
@@ -46,9 +46,9 @@ const Body = ()=> {
             </div>
         </div>
 
-       
-      );
-  
+
+    );
+
 }
 
 export default Body;
