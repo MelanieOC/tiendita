@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import products from './data';
-import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
+//import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { connect } from 'redux-zero/react';
+import { Dish } from './Dish';
+import { Grid, Row, Col } from 'react-bootstrap';
+/*
 class App extends Component {
   render() {
     return (
@@ -38,6 +42,22 @@ class App extends Component {
       </div>
     );
   }
+
+*/
+
+const App = ({ allDish }) => {
+  return (
+    <Grid>
+      <Row>
+        {
+          allDish.map(item => <Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" />)
+        }
+
+      </Row>
+    </Grid>
+  );
 }
 
-export default App;
+
+const mapToProps = ({ allDish }) => ({ allDish });
+export default connect(mapToProps)(App);
