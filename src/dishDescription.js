@@ -12,7 +12,7 @@ const DishDescription = ({ dish }) => {
 					<img className="main-image" alt="Selected Product" title="Selected Product" src={shake} />
 					<div id="description">
 						<h1>{dish.dish}</h1>
-						<p></p>
+						<p>{dish.description}</p>
 
 						<div id="details-total">
 							<p id="price-quantity">${dish.price.toFixed(2)}</p>
@@ -27,7 +27,9 @@ const DishDescription = ({ dish }) => {
 							Object.keys(dish.nutricionalInform).map(a => {
 								const value = dish.nutricionalInform[a];
 								const nutri = a.split('_');
-								const result = (nutri.length > 1) ? nutri[0].charAt(0).toUpperCase() + nutri[0].slice(1) + '(' + nutri[1] + ')' : a.charAt(0).toUpperCase() + a.slice(1);
+								const result = (nutri.length > 1) ?
+									nutri[0].charAt(0).toUpperCase() + nutri[0].slice(1) + '(' + nutri[1] + ')' :
+									a.charAt(0).toUpperCase() + a.slice(1);
 								return (
 									<div>
 										<dt>{result}</dt>
@@ -36,7 +38,7 @@ const DishDescription = ({ dish }) => {
 								);
 							})
 						}
-						
+
 					</dl>
 				</div>
 				<a id="navigate-next" ></a>

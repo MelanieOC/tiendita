@@ -22,11 +22,9 @@ export const Body = ({component}) => {
 
                         </section>
                         <section id="content">
-                            <div>
                                 {
                                     component
                                 }
-                            </div>
 
                         </section>
 
