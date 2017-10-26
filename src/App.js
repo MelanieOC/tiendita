@@ -48,12 +48,12 @@ class App extends Component {
 const App = ({ allDish }) => {
   return (
     <Grid>
-      <Row>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {
           allDish.map(item => <Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" />)
         }
 
-      </Row>
+      </div>
     </Grid>
   );
 }
