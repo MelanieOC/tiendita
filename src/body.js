@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './body.css';
 
-export const Body = ({items}) => {
+export const Body = ({component}) => {
 
     return (
 
@@ -24,9 +24,9 @@ export const Body = ({items}) => {
                         </section>
                         <section id="content">
                             <div>
-                                <ul id="main" className="k-widget k-listview" role="listbox">
-                                    {items}
-                                </ul>
+                                {
+                                    component
+                                }
                             </div>
 
                         </section>

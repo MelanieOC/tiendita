@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import products from './data';
 //import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { connect } from 'redux-zero/react';
 import { Dish } from './Dish';
-import { Body } from './Body.js';
+import { Body } from './body.js';
 import { Grid, Row, Col } from 'react-bootstrap';
+import DishDescription from './dishDescription.js';
+
 /*
 class App extends Component {
   render() {
@@ -46,14 +47,31 @@ class App extends Component {
 */
 
 const App = ({ allDish }) => {
-  const dishes = allDish.map(item => <li><Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" /></li>);
+  const dishes = 
+  (<ul id="main" className="k-widget k-listview" role="listbox">
+    {allDish.map(item =>
+      (<li><Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" /></li>))}
+  </ul>);
   return (
     <div>
-      <Body items={dishes} />
+      <Body component={dishes} />
     </div>
   );
 }
 
 
 const mapToProps = ({ allDish }) => ({ allDish });
+
+
+/*
+const App = ({ food }) => {
+ 
+    return (
+      <div className="App">
+        <DishDescription/>
+      </div>
+    );
+}
+const mapToProps = ({food}) => ({food});
+*/
 export default connect(mapToProps)(App);
