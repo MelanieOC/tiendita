@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-//import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { connect } from 'redux-zero/react';
 import { Dish } from './Dish';
 import { Body } from './body.js';
-import { Grid, Row, Col } from 'react-bootstrap';
 import DishDescription from './dishDescription.js';
 
 /*
@@ -54,24 +52,11 @@ const App = ({ allDish }) => {
   </ul>);
   return (
     <div>
-      <Body component={dishes} />
+      <Body component={<DishDescription/>} />
     </div>
   );
 }
 
 
 const mapToProps = ({ allDish }) => ({ allDish });
-
-
-/*
-const App = ({ food }) => {
- 
-    return (
-      <div className="App">
-        <DishDescription/>
-      </div>
-    );
-}
-const mapToProps = ({food}) => ({food});
-*/
 export default connect(mapToProps)(App);
