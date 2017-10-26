@@ -32,6 +32,7 @@
     border-top: 1px dotted #a6a6a6;
     margin: 0;
     padding: 0;
+    background-image: none;
 }
 
 .add-to-cart:before{
