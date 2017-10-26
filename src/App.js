@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Order } from './Order';
 import './App.css';
 import { connect } from 'redux-zero/react';
 import { Dish } from './Dish';
@@ -17,9 +18,10 @@ const App = ({ allDish }) => {
     <div>
       <Body component={<DishDescription dish={allDish[0]}/>} />
     </div>
+
   );
 }
-
+//<Order quantity={12.00}/>
 
 const mapToProps = ({ allDish }) => ({ allDish });
 export default connect(mapToProps)(App);
