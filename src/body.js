@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Body.css';
+import './body.css';
 
-const Body = () => {
+export const Body = ({items}) => {
 
     return (
 
@@ -24,7 +24,9 @@ const Body = () => {
                         </section>
                         <section id="content">
                             <div>
-                                <ul data-role="listview" data-bind="source:items" data-template="item" id="main" className="k-widget k-listview" role="listbox"></ul>
+                                <ul id="main" className="k-widget k-listview" role="listbox">
+                                    {items}
+                                </ul>
                             </div>
 
                         </section>
@@ -49,5 +51,3 @@ const Body = () => {
     );
 
 }
-
-export default Body;
