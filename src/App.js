@@ -8,13 +8,14 @@ import CheckoutOrder from './CheckoutOrder';
 
 const App = ({ allDish }) => {
   const dishes = 
-  (<ul id="main" className="k-widget k-listview" role="listbox">
+  (
+  <div><ul id="main" className="k-widget k-listview" role="listbox">
     {allDish.map(item =>
       (<li><Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" /></li>))}
-  </ul>);
+  </ul></div>);
   return (
     <div>
-      <Body component={<CheckoutOrder/>} />
+      <Body component={<DishDescription dish={allDish[0]}/>} />
     </div>
   );
 }

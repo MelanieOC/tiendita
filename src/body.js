@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import './body.css';
+import logo from './images/logo.png';
 // id="pre-content" aqui cambia
 //desaparece div child "pre-content"
-export const Body = ({component}) => {
+export const Body = ({ component }) => {
     return (
         <div id="application">
             <div>
                 <div id="wrapper">
                     <div id="header">
-                        <h1 className="logo"><a href="#/"></a></h1>
+                        <h1 className="logo">
+                            <a href="#/">
+                                <img src={logo} />
+                            </a>
+                        </h1>
                         <a id="cart-info" href="#">Shopping Cart<span><span data-bind="text: cart.contentsCount"></span> items</span></a>
                     </div>
                     <p data-bind="visible: cart.cleared" >Thank you for your order!</p>
@@ -22,9 +27,9 @@ export const Body = ({component}) => {
 
                         </section>
                         <section id="content">
-                                {
-                                    component
-                                }
+                            {
+                                component
+                            }
 
                         </section>
 
