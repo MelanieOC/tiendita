@@ -33,6 +33,7 @@
     margin: 0;
     padding: 0;
     background-image: none;
+    border-radius: 0px;
 }
 
 .add-to-cart:before{
