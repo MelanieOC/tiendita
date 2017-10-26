@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './Body.css';
+import './body.css';
 
+<<<<<<< HEAD
 const Body = () => {
+=======
+export const Body = ({items}) => {
+>>>>>>> 10f9461e71210881d78902f1915ffee5479e3a3c
 
     return (
 
@@ -25,7 +28,9 @@ const Body = () => {
                         </section>
                         <section id="content">
                             <div>
-                                <ul data-role="listview" data-bind="source:items" data-template="item" id="main" className="k-widget k-listview" role="listbox"></ul>
+                                <ul id="main" className="k-widget k-listview" role="listbox">
+                                    {items}
+                                </ul>
                             </div>
 
                         </section>
@@ -46,9 +51,14 @@ const Body = () => {
             </div>
         </div>
 
+<<<<<<< HEAD
 
     );
 
 }
+=======
+>>>>>>> 10f9461e71210881d78902f1915ffee5479e3a3c
 
-export default Body;
+    );
+
+}
