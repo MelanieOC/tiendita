@@ -52,7 +52,7 @@ const App = ({ allDish }) => {
   </ul>);
   return (
     <div>
-      <Body component={<DishDescription/>} />
+      <Body component={<DishDescription dish={allDish[0]}/>} />
     </div>
   );
 }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './body.css';
-
+// id="pre-content" aqui cambia
+//desaparece div child "pre-content"
 export const Body = ({component}) => {
-
     return (
-
         <div id="application">
             <div>
                 <div id="wrapper">
@@ -43,11 +42,7 @@ export const Body = ({component}) => {
                         <p>Copyright © 2017, Progress Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.</p>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     );
-
 }
