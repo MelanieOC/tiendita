@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import products from './data';
 //import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { connect } from 'redux-zero/react';
 import { Dish } from './Dish';
+import { Body } from './Body.js';
 import { Grid, Row, Col } from 'react-bootstrap';
 /*
 class App extends Component {
@@ -46,15 +46,11 @@ class App extends Component {
 */
 
 const App = ({ allDish }) => {
+  const dishes = allDish.map(item => <li><Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" /></li>);
   return (
-    <Grid>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {
-          allDish.map(item => <Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" />)
-        }
-
-      </div>
-    </Grid>
+    <div id="application">
+      <Body items={dishes} />
+    </div>
   );
 }
 

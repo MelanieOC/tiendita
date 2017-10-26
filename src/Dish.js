@@ -4,7 +4,7 @@ import './Dish.css';
 
 export const Dish = ({image, name, price, addToCart, navDetails}) => {
     return (
-        <Row className="products">
+        <div className="products">
             <a className="view-details" href={navDetails}>
                 <Image src={image} alt="plate" className="main-image"/>
                 <strong>{name}</strong>
@@ -20,6 +20,6 @@ export const Dish = ({image, name, price, addToCart, navDetails}) => {
                     Add to cart
                 </Button>
             </div>
-        </Row>
+        </div>
     );
 }
