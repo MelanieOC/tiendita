@@ -48,7 +48,7 @@ class App extends Component {
 const App = ({ allDish }) => {
   const dishes = allDish.map(item => <li><Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" /></li>);
   return (
-    <div id="application">
+    <div>
       <Body items={dishes} />
     </div>
   );
