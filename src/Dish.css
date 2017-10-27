@@ -34,6 +34,7 @@
     padding: 0;
     background-image: none;
     border-radius: 0px;
+    position: relative;
 }
 
 .add-to-cart:before{
@@ -83,9 +84,21 @@
 
 .view-details:hover:after {
     background-color:  rgba(0,0,0,0.75);
-    background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/arrow-right.png);
+    background-image: url("./images/arrow-right.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+}
+
+.hide {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 83px;
+    z-index: 1;
+}
+
+.view-details:hover .hide {
+    display: block
 }
 
 .products {
