@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './body.css';
 
-<<<<<<< HEAD
-const Body = () => {
-=======
 export const Body = ({items}) => {
->>>>>>> 10f9461e71210881d78902f1915ffee5479e3a3c
 
     return (
 
@@ -51,13 +47,6 @@ export const Body = ({items}) => {
             </div>
         </div>
 
-<<<<<<< HEAD
-
-    );
-
-}
-=======
->>>>>>> 10f9461e71210881d78902f1915ffee5479e3a3c
 
     );
 

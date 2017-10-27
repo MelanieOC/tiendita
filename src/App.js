@@ -3,7 +3,7 @@ import products from './data';
 //import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { connect } from 'redux-zero/react';
 import { Dish } from './Dish';
-import { Body } from './Body.js';
+import { Body } from './body.js';
 import { Grid, Row, Col } from 'react-bootstrap';
 /*
 class App extends Component {
