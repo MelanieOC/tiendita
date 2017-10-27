@@ -19,7 +19,7 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <span className="k-widget k-numerictextbox">
                         <span className="k-numeric-wrap k-state-default">
                             <input type="number" className="k-formatted-value k-input"
-                                defaultValue={product.amount.toFixed(2)}
+                                defaultValue={product.amount}
                                 style={{ display: 'inline-block' }} 
                                 ref={(e) => this.input[index] = e}
                                 min='0'

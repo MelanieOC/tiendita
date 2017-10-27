@@ -145,6 +145,7 @@ h3{
 .oculto{
     display: none;
 }
+
 .view-selected-items, .view-selected-items:hover {
     display: block;
     position: relative;
@@ -161,6 +162,10 @@ h3{
 }
 
 .selected-product:hover {
+    cursor: pointer;
+    background-color:  rgba(0,0,0,0.75);
+}
+.oculto:hover {
     cursor: pointer;
     background-color:  rgba(0,0,0,0.75);
 }

@@ -13,20 +13,18 @@ export const Order = ({ shoppingCart, total }) => {
                     <ul id="shop-list" className="k-widget k-listview" role="listbox">
                         {
                             shoppingCart.map(item => {
-                                if (item.amount) {
-                                    return (
-                                        <li className="selected-products-list" role="option" aria-selected="false">
-                                            <div className="selected-product" onClick={() => removeDish(item)}>
-                                                <a className="view-selected-items">
-                                                    <img src={item.image} heigth="100" width="100" />
-                                                </a>
-                                                <img src={remove} className='oculto' />
-                                            </div>
+                                return (
+                                    <li className="selected-products-list" role="option" aria-selected="false">
+                                        <div className="selected-product" onClick={() => removeDish(item)}>
+                                            <a className="view-selected-items">
+                                                <img src={item.image} heigth="100" width="100" />
+                                            </a>
+                                            <img src={remove} className='oculto' />
+                                        </div>
 
-                                            <span className="selected-image-price"><span>{item.amount}</span>x<span>${item.price.toFixed(2)}</span></span>
-                                        </li>
-                                    );
-                                }
+                                        <span className="selected-image-price"><span>{item.amount}</span>x<span>${item.price.toFixed(2)}</span></span>
+                                    </li>
+                                );
                             })
                         }
 
