@@ -12,7 +12,8 @@ import {
   NavLink,
   Switch,
   Redirect
-} from 'react-router-dom'
+} from 'react-router-dom';
+// import {addToCart} from './Actions.js'
 
 
 const App = ({ allDish }) => {
@@ -22,7 +23,7 @@ const App = ({ allDish }) => {
         <ul id="main" className="k-widget k-listview" role="listbox">
           {allDish.map((item, index) =>
             (<li key={index}>
-              <Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails={index + 1} />
+              <Dish image={item.image} name={item.dish} price={item.price} index={index} navDetails={index + 1} />
             </li>))}
         </ul>
       </div>
@@ -43,7 +44,7 @@ const App = ({ allDish }) => {
               const path = "/menu/" + (index + 1);
               return <Route path={path} render={() =>
                 <Body component={<DishDescription dish={allDish[index]} index={index + 1} />}
-                  order={<Order shoppingCart={shoppingCart} total={total}/>}
+                  order={<Order shoppingCart={shoppingCart} total={total} />}
                   shoppingCart={shoppingCart} />}
               />
             })

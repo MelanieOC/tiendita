@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import remove from './images/remove-icon.png';
 import './Order.css';
+import {emptyCart, removeDish} from './Actions.js';
 
 export const Order = ({ shoppingCart, total }) => {
     return (
@@ -14,7 +15,7 @@ export const Order = ({ shoppingCart, total }) => {
                             shoppingCart.map(item => {
                                 return (
                                     <li className="selected-products-list" role="option" aria-selected="false">
-                                        <div className="selected-product">
+                                        <div className="selected-product" onClick={() => removeDish(item)}>
                                             <a className="view-selected-items">
                                                 <img src={item.image} heigth="100" width="100" />
                                             </a>
@@ -29,12 +30,11 @@ export const Order = ({ shoppingCart, total }) => {
 
                     </ul>
 
-                    <div id="shopping-cart">
-                        <h3>your<br />shopping cart</h3>
-                        <p className="total-price" >$ {total}</p>
-                        <a id="empty-cart" href="#" >empty cart</a>
-                        <NavLink id="checkout" to="/checkout">checkout</NavLink>
-                    </div>
+                <div id="shopping-cart">
+                    <h3>your<br />shopping cart</h3>
+                    <p className="total-price" >$ {total}</p>
+                    <a id="empty-cart" href="#" onClick={() => {emptyCart()}} >empty cart</a>
+                    <NavLink id="checkout" to="/checkout">checkout</NavLink>
                 </div>
             }
         </div>
