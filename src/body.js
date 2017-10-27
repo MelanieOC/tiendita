@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './body.css';
 import logo from './images/logo.png';
-// id="pre-content" aqui cambia
-//desaparece div child "pre-content"
+import {NavLink} from 'react-router-dom';
+
 export const Body = ({ component, order, shoppingCart }) => {
     return (
         <div id="application">
@@ -10,9 +10,9 @@ export const Body = ({ component, order, shoppingCart }) => {
                 <div id="wrapper">
                     <div id="header">
                         <h1 className="logo">
-                            <a href="#/">
+                            <NavLink to="/">
                                 <img src={logo} />
-                            </a>
+                            </NavLink>
                         </h1>
                         <a id="cart-info" href="#">
                             Shopping Cart
