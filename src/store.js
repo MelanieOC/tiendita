@@ -2,7 +2,8 @@ import createStore from 'redux-zero';
 import products from './data';
 
 const initialState = {
-    allDish : products
+    allDish : products,
+    shoppingCart: []
 }
 
 const store = createStore(initialState);

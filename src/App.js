@@ -6,17 +6,10 @@ import { Dish } from './Dish';
 import { Body } from './body.js';
 import DishDescription from './dishDescription.js';
 import CheckoutOrder from './CheckoutOrder';
-import {
-  BrowserRouter,
-  Route,
-  NavLink,
-  Switch,
-  Redirect
-} from 'react-router-dom';
-// import {addToCart} from './Actions.js'
+import { BrowserRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom';
 
 
-const App = ({ allDish }) => {
+const App = ({ allDish, shoppingCart }) => {
   const dishes =
     (
       <div>
@@ -28,7 +21,6 @@ const App = ({ allDish }) => {
         </ul>
       </div>
     );
-  const shoppingCart = allDish.filter(a => a.amount);
   const total = shoppingCart.reduce(((total, item) => total + item.price * item.amount), 0);
   return (
     <BrowserRouter>
@@ -62,5 +54,5 @@ const App = ({ allDish }) => {
   );
 }
 
-const mapToProps = ({ allDish }) => ({ allDish });
+const mapToProps = ({ allDish, shoppingCart }) => ({ allDish, shoppingCart });
 export default connect(mapToProps)(App);

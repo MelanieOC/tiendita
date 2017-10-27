@@ -20,7 +20,7 @@ export const Dish = ({ image, name, price, index, navDetails }) => {
             <div>
                 <Button
                     className="add-to-cart"
-                    onClick={() => addToCart(index)}>
+                    onClick={() => addToCart(name, index)}>
                     Add to cart
                 </Button>
             </div>
