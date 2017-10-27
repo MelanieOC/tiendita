@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './dishDescription.css';
-import shake from './images/shake.jpg'
+import { NavLink } from 'react-router-dom';
 
-const DishDescription = ({ dish }) => {
+const DishDescription = ({ dish, index }) => {
 	return (
 		<section id="content">
 			<div id="details-top-image"></div>
 			<div id="details">
-				<a id="navigate-prev"></a>
+				<NavLink id="navigate-prev" to={'/menu/' + (index - 1)}></NavLink>
 				<div id="detail-info">
 					<img className="main-image" alt="Selected Product" title="Selected Product" src={dish.image} />
 					<div id="description">
@@ -41,7 +41,7 @@ const DishDescription = ({ dish }) => {
 
 					</dl>
 				</div>
-				<a id="navigate-next" ></a>
+				<NavLink id="navigate-next" to={'/menu/' + (index + 1)}></NavLink>
 			</div>
 			<div id="details-bottom-image"></div>
 		</section>

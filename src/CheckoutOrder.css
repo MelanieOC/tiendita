@@ -657,24 +657,24 @@ p#details-total-price span{
 
 
 #details-top-image{
-    background: url('sushi-preview.png') no-repeat top left;
+    background: url('images/sushi-preview.png') no-repeat top left;
     height: 200px;
 }
 
 
 #checkout-top-image{
-    background: url('sushi-preview.png') no-repeat top left;
+    background: url('images/sushi-preview.png') no-repeat top left;
     height: 50px;
 }
 
 #checkout-bottom-image{
-    background: url('sushi-preview.png') no-repeat bottom left;
+    background: url('images/sushi-preview.png') no-repeat bottom left;
     height: 53px;
     margin-bottom: 20px;
 }
 
 #details-bottom-image{
-    background: url('sushi-preview.png') no-repeat bottom left;
+    background: url('images/sushi-preview.png') no-repeat bottom left;
     height: 200px;
     margin-bottom: 20px;
 }
