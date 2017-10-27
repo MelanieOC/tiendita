@@ -291,37 +291,6 @@ h3{
     width: 100px;
 }
 
-.view-selected-items, .view-selected-items:hover {
-    display: block;
-    position: relative;
-}
-
-.view-selected-items, .view-selected-items:hover {
-    display: block;
-    position: relative;
-}
-
-.view-selected-items:hover {
-    cursor: pointer;
-}
-
-.view-selected-items:after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0);
-}
-
-.view-selected-items:hover:after {
-    background-color:  rgba(0,0,0,0.75);
-    
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
 
 #main-section ul li {
     float: left;

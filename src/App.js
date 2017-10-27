@@ -43,7 +43,7 @@ const App = ({ allDish }) => {
               const path = "/menu/" + (index + 1);
               return <Route path={path} render={() =>
                 <Body component={<DishDescription dish={allDish[index]} index={index + 1} />}
-                  order={<Order shoppingCart={allDish} />}
+                  order={<Order shoppingCart={shoppingCart} total={total}/>}
                   shoppingCart={shoppingCart} />}
               />
             })
