@@ -3,7 +3,7 @@ import './body.css';
 import logo from './images/logo.png';
 // id="pre-content" aqui cambia
 //desaparece div child "pre-content"
-export const Body = ({ component }) => {
+export const Body = ({ component, order, shoppingCart }) => {
     return (
         <div id="application">
             <div>
@@ -14,18 +14,27 @@ export const Body = ({ component }) => {
                                 <img src={logo} />
                             </a>
                         </h1>
-                        <a id="cart-info" href="#">Shopping Cart<span><span data-bind="text: cart.contentsCount"></span> items</span></a>
+                        <a id="cart-info" href="#">
+                            Shopping Cart
+                            <span>
+                                <span>{shoppingCart.length}</span> items
+                            </span>
+                        </a>
                     </div>
-                    <p data-bind="visible: cart.cleared" >Thank you for your order!</p>
+                    {
+                        order && <p data-bind="visible: cart.cleared" >Thank you for your order!</p>
+                    }
                     <div id="main-section">
-                        <section id="pre-content">
-                            <div>
-                                <div id="shop-info" data-bind="attr:{className: cartContentsClass}" className="empty">
+                        {
+                            order &&
+                            <section id="pre-content">
+                                {
+                                    order
+                                }
 
-                                </div>
-                            </div>
+                            </section>
+                        }
 
-                        </section>
                         <section id="content">
                             {
                                 component

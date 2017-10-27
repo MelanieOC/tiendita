@@ -31,7 +31,8 @@ const products = [
             energy_kcal: 4.2011,
             sugar: 0.3738
         },
-        image: sashimiSalad
+        image: sashimiSalad,
+        amount: 1
     },
     {
         dish: 'Chirashi sushi',
@@ -45,7 +46,8 @@ const products = [
             energy_kcal: '1.8000',
             sugar: 0.3114
         },
-        image: chirashiSushi
+        image: chirashiSushi,
+        amount: 0
     },
     {
         dish: 'Seaweed salad',
@@ -59,7 +61,8 @@ const products = [
             energy_kcal: '1.2190',
             sugar: 0.0037
         },
-        image: seaweedSalad
+        image: seaweedSalad,
+        amount: 0
     },
     {
         dish: 'Edamame',
@@ -73,7 +76,8 @@ const products = [
             energy_kcal: 4.1334,
             sugar: 0.1028
         },
-        image: edamame
+        image: edamame,
+        amount: 0
     },
     {
         dish: 'Miso soup',
@@ -87,7 +91,8 @@ const products = [
             energy_kcal: '2.2450',
             sugar: 0.1399
         },
-        image: misoSoup
+        image: misoSoup,
+        amount: 0
     },
     {
         dish: 'Maguro',
@@ -101,7 +106,8 @@ const products = [
             energy_kcal: 6.7442,
             sugar: 0.4018
         },
-        image: maguro
+        image: maguro,
+        amount: 0
     },
     {
         dish: 'Shake',
@@ -115,7 +121,8 @@ const products = [
             energy_kcal: 4.0489,
             sugar: 0.245
         },
-        image: shake
+        image: shake,
+        amount: 0
     },
     {
         dish: 'Shiromi',
@@ -129,7 +136,8 @@ const products = [
             energy_kcal: 3.9313,
             sugar: 0.0509
         },
-        image: shiromi
+        image: shiromi,
+        amount: 0
     },
     {
         dish: 'Tekka maki',
@@ -143,7 +151,8 @@ const products = [
             energy_kcal: 2.3386,
             sugar: 0.4771
         },
-        image: tekkaMaki
+        image: tekkaMaki,
+        amount: 0
     },
     {
         dish: 'Hosomaki Mix',
@@ -157,7 +166,8 @@ const products = [
             energy_kcal: 5.7099,
             sugar: 0.4839
         },
-        image: hosomakiMix
+        image: hosomakiMix,
+        amount: 0
     },
     {
         dish: 'California rolls',
@@ -171,7 +181,8 @@ const products = [
             energy_kcal: 4.4584,
             sugar: 0.0174
         },
-        image: californiaRolls
+        image: californiaRolls,
+        amount: 0
     },
     {
         dish: 'Seattle rolls',
@@ -185,7 +196,8 @@ const products = [
             energy_kcal: 4.4685,
             sugar: 0.2533
         },
-        image: seattleRolls
+        image: seattleRolls,
+        amount: 0
     },
     {
         dish: 'Spicy Tuna rolls',
@@ -199,7 +211,8 @@ const products = [
             energy_kcal: 5.9969,
             sugar: 0.0474
         },
-        image: spicytunaRolls
+        image: spicytunaRolls,
+        amount: 0
     },
     {
         dish: 'Ebi rolls',
@@ -213,7 +226,8 @@ const products = [
             energy_kcal: '4.6070',
             sugar: 0.439
         },
-        image: ebiRolls
+        image: ebiRolls,
+        amount: 0
     },
     {
         dish: 'Chicken Teriyaki',
@@ -227,7 +241,8 @@ const products = [
             energy_kcal: 4.4707,
             sugar: 0.4271
         },
-        image: chickenTeriyaki
+        image: chickenTeriyaki,
+        amount: 0
     },
     {
         dish: 'Salmon Teriyaki',
@@ -241,7 +256,8 @@ const products = [
             energy_kcal: 5.4287,
             sugar: 0.1158
         },
-        image: salmonTeriyaki
+        image: salmonTeriyaki,
+        amount: 0
     },
     {
         dish: 'Gohan',
@@ -255,7 +271,8 @@ const products = [
             energy_kcal: 6.0021,
             sugar: 0.3426
         },
-        image: gohan
+        image: gohan,
+        amount: 0
     },
     {
         dish: 'Tori Katsu',
@@ -269,7 +286,8 @@ const products = [
             energy_kcal: 4.2707,
             sugar: 0.0161
         },
-        image: toriKatsu
+        image: toriKatsu,
+        amount: 0
     },
     {
         dish: 'Yaki Udon',
@@ -283,7 +301,9 @@ const products = [
             energy_kcal: 1.7945,
             sugar: 0.1798
         },
-        image: yakiUdon
+        image: yakiUdon,
+
+        amount: 0
     }
 ]
 

@@ -1,45 +1,21 @@
 import React, { Component } from 'react';
 import './CheckoutOrder.css';
-import edamame from './edamame.jpg'
-import chirashi from './chirashi-sushi.jpg'
-import seaweed from './seaweed-salad.jpg'
 
-const CheckoutOrder = ({ }) => {
-    const selected = [
-        {
-            name: 'Edamame',
-            price: 4,
-            count: 1,
-            img: edamame
-        },
-        {
-            name: 'Chirashi Sushi',
-            price: 4,
-            count: 1,
-            img: chirashi
-        },
-        {
-            name: 'Seaweed Salad',
-            price: 4,
-            count: 1,
-            img: seaweed
-        }
-    ]
-
-    const products = selected.map((product, index) => {
+const CheckoutOrder = ({ shoppingCart, total }) => {
+    const products = shoppingCart.map((product, index) => {
         return (
             <tr key={index}>
                 <td>
                     <div className="cart-image-wrapper">
-                        <img src={product.img} />
+                        <img src={product.image} />
                     </div>
-                    <span className="product-name">{product.name}</span>
+                    <span className="product-name">{product.dish}</span>
                 </td>
                 <td>
                     <span className="k-widget k-numerictextbox">
                         <span className="k-numeric-wrap k-state-default">
-                            <input type="text" className="k-formatted-value k-input"
-                                value={product.count + '.00'}
+                            <input type="number" className="k-formatted-value k-input"
+                                defaultValue={product.amount.toFixed(2)}
                                 style={{ display: 'inline-block' }} />
                         </span>
                     </span>
@@ -67,7 +43,7 @@ const CheckoutOrder = ({ }) => {
                 </table>
                 <p id="total-checkout">
                     <em>total:</em>
-                    <span>$4.00</span>
+                    <span>${total.toFixed(2)}</span>
                 </p>
                 <a className="cancel-order" href="#">cancel order</a>
                 <button className="order-now">order now!</button>

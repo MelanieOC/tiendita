@@ -9,7 +9,7 @@ const DishDescription = ({ dish }) => {
 			<div id="details">
 				<a id="navigate-prev"></a>
 				<div id="detail-info">
-					<img className="main-image" alt="Selected Product" title="Selected Product" src={shake} />
+					<img className="main-image" alt="Selected Product" title="Selected Product" src={dish.image} />
 					<div id="description">
 						<h1>{dish.dish}</h1>
 						<p>{dish.description}</p>
