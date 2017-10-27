@@ -3,8 +3,9 @@ import { Grid, Row, Col, Button, Image } from 'react-bootstrap';
 import './Dish.css';
 import { NavLink } from 'react-router-dom';
 import arrow from './images/arrow-right.png'
+import {addToCart} from './Actions.js'
 
-export const Dish = ({ image, name, price, addToCart, navDetails }) => {
+export const Dish = ({ image, name, price, index, navDetails }) => {
     return (
         <div className="products">
             <NavLink className="view-details" to={'/menu/'+ navDetails}>
@@ -19,7 +20,7 @@ export const Dish = ({ image, name, price, addToCart, navDetails }) => {
             <div>
                 <Button
                     className="add-to-cart"
-                    onClick={addToCart}>
+                    onClick={() => addToCart(index)}>
                     Add to cart
                 </Button>
             </div>

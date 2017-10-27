@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './Order.css';
+import {emptyCart} from './Actions.js';
 
 export const Order = ({ shoppingCart, total }) => {
     return (
@@ -26,7 +27,7 @@ export const Order = ({ shoppingCart, total }) => {
                 <div id="shopping-cart">
                     <h3>your<br />shopping cart</h3>
                     <p className="total-price" >$ {total}</p>
-                    <a id="empty-cart" href="#" >empty cart</a>
+                    <a id="empty-cart" href="#" onClick={() => {emptyCart()}} >empty cart</a>
                     <NavLink id="checkout" to="/checkout">checkout</NavLink>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './dishDescription.css';
 import { NavLink } from 'react-router-dom';
+import {addToCart} from './Actions.js'
 
 const DishDescription = ({ dish, index }) => {
 	return (
@@ -16,7 +17,9 @@ const DishDescription = ({ dish, index }) => {
 
 						<div id="details-total">
 							<p id="price-quantity">${dish.price.toFixed(2)}</p>
-							<button className="buy">Add to cart</button>
+							<button 
+								className="buy"
+								onClick={() => addToCart(index - 1)}>Add to cart</button>
 						</div>
 					</div>
 				</div>
