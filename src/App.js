@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import products from './data';
-//import { Panel, Image, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Order } from './Order';
+import './App.css';
 import { connect } from 'redux-zero/react';
 import { Dish } from './Dish';
 import { Body } from './body.js';
+<<<<<<< HEAD
 import { Grid, Row, Col } from 'react-bootstrap';
 /*
 class App extends Component {
@@ -42,18 +43,65 @@ class App extends Component {
       </div>
     );
   }
+=======
+import DishDescription from './dishDescription.js';
+import CheckoutOrder from './CheckoutOrder';
+import {
+  BrowserRouter,
+  Route,
+  NavLink,
+  Switch,
+  Redirect
+} from 'react-router-dom'
+>>>>>>> 3fc74eb3148ffce627c0d09b3d5c5af94b377626
 
-*/
 
 const App = ({ allDish }) => {
-  const dishes = allDish.map(item => <li><Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails="#" /></li>);
+  const dishes =
+    (
+      <div>
+        <ul id="main" className="k-widget k-listview" role="listbox">
+          {allDish.map((item, index) =>
+            (<li key={index}>
+              <Dish image={item.image} name={item.dish} price={item.price} addToCart="" navDetails={index + 1} />
+            </li>))}
+        </ul>
+      </div>
+    );
+  const shoppingCart = allDish.filter(a => a.amount);
+  const total = shoppingCart.reduce(((total, item) => total + item.price * item.amount), 0);
   return (
-    <div id="application">
-      <Body items={dishes} />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Switch>
+          <Route exact path="/" render={() =>
+            <Body component={dishes}
+              order={<Order shoppingCart={shoppingCart} total={total} />}
+              shoppingCart={shoppingCart} />}
+          />
+          {
+            allDish.map((item, index) => {
+              const path = "/menu/" + (index + 1);
+              return <Route path={path} render={() =>
+                <Body component={<DishDescription dish={allDish[index]} index={index + 1} />}
+                  order={<Order shoppingCart={allDish} />}
+                  shoppingCart={shoppingCart} />}
+              />
+            })
+          }
+          <Route exact path="/checkout" render={() =>
+            <Body component={<CheckoutOrder shoppingCart={shoppingCart} total={total} />}
+              shoppingCart={shoppingCart} />}
+          />
+          <Route render={() => <Redirect to="/" />} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+
+
   );
 }
-
+//<Body component={<CheckoutOrder shoppingCart={shoppingCart} total={total} />}} />
 
 const mapToProps = ({ allDish }) => ({ allDish });
 export default connect(mapToProps)(App);
