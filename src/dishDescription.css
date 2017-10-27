@@ -18,12 +18,18 @@
     display: inline-block;
     height: 200px;
     width: 100px;
-    background: #000 url(images/nav-prev.png) no-repeat center;
-}
-#navigate-prev:hover{
-    background: #d60041 url('images/nav-prev.png') no-repeat center;
+    background: #000 ;
 }
 
+#navigate-prev:hover{
+    background: #d60041;
+}
+#navigate-prev .oculto{
+    display:block;
+    position: relative;
+    top: 78px;
+    left: 40%;
+}
 a {
     text-decoration: none;
     color: #000;
@@ -166,10 +172,16 @@ dl {
     display: inline-block;
     height: 200px;
     width: 100px;
-    background: #000 url(images/nav-next.png) no-repeat center;
+    background: #000;
 }
 #navigate-next:hover{
-    background: #d60041 url('images/nav-next.png') no-repeat center;
+    background: #d60041 ;
+}
+#navigate-next .oculto{
+    display:block;
+    position: relative;
+    top: 78px;
+    left: 40%;
 }
 #details-bottom-image {
     background: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/sushi-preview.png) no-repeat bottom left;

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import './CheckoutOrder.css';
+import {NavLink} from 'react-router-dom';
+import {changeAmount,emptyCart} from './Actions.js';
 
 const CheckoutOrder = ({ shoppingCart, total }) => {
+    
     const products = shoppingCart.map((product, index) => {
+        this.input=[];
         return (
             <tr key={index}>
                 <td>
@@ -12,9 +16,16 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <span className="product-name">{product.dish}</span>
                 </td>
                 <td>
-                    <input type="number" className="k-formatted-value k-input"
-                           defaultValue={product.amount.toFixed(2)}
-                            style={{ display: 'inline-block' }} />    
+                    <span className="k-widget k-numerictextbox">
+                        <span className="k-numeric-wrap k-state-default">
+                            <input type="number" className="k-formatted-value k-input"
+                                defaultValue={product.amount}
+                                style={{ display: 'inline-block' }} 
+                                ref={(e) => this.input[index] = e}
+                                min='0'
+                                onChange={()=>{this.input[index].value?changeAmount(product.dish, this.input[index].value):''}}/>
+                        </span>
+                    </span>
                 </td>
                 <td><p className="table-price">${product.price}.00</p></td>
             </tr>
@@ -41,8 +52,13 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <em>total:</em>
                     <span>${total.toFixed(2)}</span>
                 </p>
+<<<<<<< HEAD
                 <a className="cancel-order" href="#">cancel order</a>
                 <button className="order-now">order now!</button>
+=======
+                <NavLink className="cancel-order" to='/' onClick={emptyCart}>cancel order</NavLink>
+                <NavLink className="order-now" to='/' onClick={emptyCart}>order now!</NavLink>
+>>>>>>> master
             </div>
             <div id="checkout-bottom-image" />
         </div>
