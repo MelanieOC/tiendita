@@ -17,3 +17,17 @@ export const emptyCart = () => {
         allDish: emptyAllDish
     });
 }
+
+export const removeDish = (dish) => {
+    let allDish = [...store.getState().allDish];
+    let removeDish = dish.dish;
+    let cleanAllDish = allDish.map((dish) => {
+        if (dish.dish === removeDish){
+            dish.amount = 0
+        }
+        return dish;
+    });
+    store.setState({
+        allDish: cleanAllDish
+    });
+}
