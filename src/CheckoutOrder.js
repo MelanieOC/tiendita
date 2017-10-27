@@ -12,18 +12,9 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <span className="product-name">{product.dish}</span>
                 </td>
                 <td>
-                    <span>
-                            <input type="number" className="k-formatted-value k-input"
-                                defaultValue={product.amount.toFixed(2)}
-                                style={{ display: 'inline-block' }} />
-                                <span>
-                                    a
-                                </span>
-                                <span>
-                                    b
-                                </span>
-                            </span>
-                       
+                    <input type="number" className="k-formatted-value k-input"
+                           defaultValue={product.amount.toFixed(2)}
+                            style={{ display: 'inline-block' }} />    
                 </td>
                 <td><p className="table-price">${product.price}.00</p></td>
             </tr>
