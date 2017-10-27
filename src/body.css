@@ -30,10 +30,6 @@ h1, h2, h3, #main-nav, #main-nav li, ul, ul li {
     padding: 0;
 }
 
-body .k-listview {
-    border: 0;
-}
-
 #wrapper{
     margin: 60px auto 0;
     width: 1000px;
@@ -509,11 +505,6 @@ p#details-total-price span{
     
 }
 
-#navigate-next:hover{
-    
-}
-
-
 #details-top-image{
     
     height: 200px;
@@ -525,122 +516,10 @@ p#details-total-price span{
     height: 50px;
 }
 
-#checkout-bottom-image{
-    
-    height: 53px;
-    margin-bottom: 20px;
-}
-
 #details-bottom-image{
     
     height: 200px;
     margin-bottom: 20px;
-}
-
-#details-checkout{
-    background: #fff;
-    text-align: right;
-    position: relative;
-}
-
-#details-checkout h1
-{
-    font-size: 36px;
-    color: #2e2e2e;
-    padding-top: 50px;
-    padding-left: 100px;
-    padding-bottom: 53px;
-    text-align: left;
-}
-
-#details-checkout table{
-    text-align: left;
-}
-
-#details-checkout img {
- vertical-align: middle;
-padding-right: 40px;
-}
-
-table{
-    width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-spacing: 0;
-}
-
-thead{
-    font-size: 13px;
-    color: #4a4a4a;
-    text-transform: uppercase;
-}
-
-thead th{
-    font-size: 13px;
-    border-bottom: 1px solid #dadada;
-}
-
-table tbody tr td{
-    border-bottom: 1px solid #dadada;
-    padding: 0;
-}
-
-table tbody tr{
-    padding: 0;
-}
-
-table thead th:first-child{
-    text-align: left;
-    color: #4a4a4a;
-    font-size: 13px;
-}
-
-table tbody td:first-child + th {
-    text-align: center;
-}
-
-table thead th:first-child + th + th {
-    font-size: 13px;
-    text-align: right;
-}
-
-table tbody input{
-    width: 70px;
-    border: 1px solid #dadada;
-    font-size: 17px;
-    color: #2e2e2e;
-}
-
-table tbody td:first-child {
-    font-size: 21px;
-    color: #2e2e2e;
-    width: 530px;
-}
-
-table tbody td:first-child + td {
-    text-align: left;
-    width: 70px;
-}
-
-table tbody td img{
-    display: inline-block;
-}
-
-table tbody td span.product-name {
-    display: inline-block;
-    max-width: 250px;
-    height: 100px;
-    line-height: 100px;
-}
-
-table tbody td:first-child + td + td {
-    font-size: 21px;
-    text-align: right;
-    width: 200px;
-}
-
-table tbody td:first-child + td + td p{
-
 }
 
 .table-price{
@@ -659,58 +538,6 @@ table tbody td:first-child + td + td p{
     padding-right: 3px;
 }
 
-#total-checkout{
-    font-size: 36px;
-    color: #2e2e2e;
-    padding-right: 100px;
-    padding-top: 27px;
-    text-align: right;
-    line-height: 1em;
-    text-transform: uppercase;
-
-}
-
-#total-checkout span{
-    display:inline-block;
-    color: #2e2e2e;
-}
-
-#total-checkout em{
-    color: #787878;
-    font-size: 10px;
-    font-style:normal;
-    font-weight:normal;
-    display: inline-block;
-    padding-right: 13px;
-}
-
-.cancel-order {
-    height: 48px;
-    width: 131px;
-    display: inline-block;
-    color: #d60041;
-    font-size: 13px;
-    line-height: 48px;
-    vertical-align: middle;
-    text-transform: uppercase;
-    background-color: #fff;
-    text-align: center;
-    margin-bottom: 49px;
-    margin-top: 54px;
-}
-
-.cancel-order:hover {
-    text-decoration:underline;
-    color: #d60041;
-}
-
-.cancel-order, .cancel-order:hover {
-    transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-}
-
 .close{
     position: absolute;
     content: " ";
@@ -721,11 +548,6 @@ table tbody td:first-child + td + td p{
     width: 38px;
     height: 38px;
 }
-
-.details-checkout p{
-    float: right;
-}
-
 
 .order-now {
     height: 48px;
@@ -809,12 +631,6 @@ table tbody td:after{
     display: block;
 }
 
-.cart-image-wrapper {
-    display: inline-block;
-    float: left;
-    height: 100px;
-    overflow: hidden;
-}
 
 /* for offline demo */
 .demo-section {

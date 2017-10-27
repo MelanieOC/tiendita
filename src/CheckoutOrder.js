@@ -14,9 +14,9 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <span className="product-name">{product.dish}</span>
                 </td>
                 <td>
-                    <span className="k-widget k-numerictextbox">
-                        <span className="k-numeric-wrap k-state-default">
-                            <input type="number" className="k-formatted-value k-input"
+                    <span>
+                        <span>
+                            <input type="number"
                                 defaultValue={product.amount}
                                 style={{ display: 'inline-block' }} 
                                 ref={(e) => this.input = e}
