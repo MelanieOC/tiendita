@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './dishDescription.css';
+import navNext from './images/nav-next.png';
+import navPrev from './images/nav-prev.png';
 import { NavLink } from 'react-router-dom';
 
 const DishDescription = ({ dish, index }) => {
@@ -7,7 +9,11 @@ const DishDescription = ({ dish, index }) => {
 		<section id="content">
 			<div id="details-top-image"></div>
 			<div id="details">
-				<NavLink id="navigate-prev" to={'/menu/' + (index - 1)}></NavLink>
+				<NavLink id="navigate-prev" to={'/menu/' + (index - 1)}>
+
+					<img className='oculto' src={navPrev} />
+
+				</NavLink>
 				<div id="detail-info">
 					<img className="main-image" alt="Selected Product" title="Selected Product" src={dish.image} />
 					<div id="description">
@@ -41,7 +47,9 @@ const DishDescription = ({ dish, index }) => {
 
 					</dl>
 				</div>
-				<NavLink id="navigate-next" to={'/menu/' + (index + 1)}></NavLink>
+				<NavLink id="navigate-next" to={'/menu/' + (index + 1)} >
+					<img className='oculto' src={navNext} />
+				</NavLink>
 			</div>
 			<div id="details-bottom-image"></div>
 		</section>
