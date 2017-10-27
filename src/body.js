@@ -22,7 +22,7 @@ export const Body = ({ component, order, shoppingCart }) => {
                         </a>
                     </div>
                     {
-                        order && <p data-bind="visible: cart.cleared" >Thank you for your order!</p>
+                        order && <p >Thank you for your order!</p>
                     }
                     <div id="main-section">
                         {

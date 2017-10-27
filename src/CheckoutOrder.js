@@ -52,13 +52,8 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <em>total:</em>
                     <span>${total.toFixed(2)}</span>
                 </p>
-<<<<<<< HEAD
-                <a className="cancel-order" href="#">cancel order</a>
-                <button className="order-now">order now!</button>
-=======
                 <NavLink className="cancel-order" to='/' onClick={emptyCart}>cancel order</NavLink>
                 <NavLink className="order-now" to='/' onClick={emptyCart}>order now!</NavLink>
->>>>>>> master
             </div>
             <div id="checkout-bottom-image" />
         </div>

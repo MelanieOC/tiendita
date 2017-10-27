@@ -84,7 +84,6 @@
 
 .view-details:hover:after {
     background-color:  rgba(0,0,0,0.75);
-    background-image: url("./images/arrow-right.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -105,7 +104,6 @@
     position: relative;
     width: 200px;
     margin-bottom: 20px;
-    padding-bottom: 62px;
     background: #fff url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/item-separator.png) repeat-y right top;
     text-align: center;
     cursor: pointer; 
