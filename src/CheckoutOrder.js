@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './CheckoutOrder.css';
+import {NavLink} from 'react-router-dom';
+import {changeAmount,emptyCart} from './Actions.js';
 
 const CheckoutOrder = ({ shoppingCart, total }) => {
     const products = shoppingCart.map((product, index) => {
@@ -15,8 +17,11 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <span className="k-widget k-numerictextbox">
                         <span className="k-numeric-wrap k-state-default">
                             <input type="number" className="k-formatted-value k-input"
-                                defaultValue={product.amount.toFixed(2)}
-                                style={{ display: 'inline-block' }} />
+                                defaultValue={product.amount}
+                                style={{ display: 'inline-block' }} 
+                                ref={(e) => this.input = e}
+                                min='0'
+                                onChange={()=>{this.input.value?changeAmount(product.dish, this.input.value):''}}/>
                         </span>
                     </span>
                 </td>
@@ -45,8 +50,8 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <em>total:</em>
                     <span>${total.toFixed(2)}</span>
                 </p>
-                <a className="cancel-order" href="#">cancel order</a>
-                <button className="order-now">order now!</button>
+                <NavLink className="cancel-order" to='/' onClick={emptyCart}>cancel order</NavLink>
+                <NavLink className="order-now" to='/' onClick={emptyCart}>order now!</NavLink>
             </div>
             <div id="checkout-bottom-image" />
         </div>
