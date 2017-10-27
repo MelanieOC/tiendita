@@ -8,7 +8,7 @@ const DishDescription = ({ dish, index }) => {
 		<section id="content">
 			<div id="details-top-image"></div>
 			<div id="details">
-				<NavLink id="navigate-prev" to={'/menu/' + (index - 1)}></NavLink>
+				<NavLink id="navigate-prev" to={index == 1 ? '/menu/19' : '/menu/' + (index - 1)}></NavLink>
 				<div id="detail-info">
 					<img className="main-image" alt="Selected Product" title="Selected Product" src={dish.image} />
 					<div id="description">
@@ -44,7 +44,7 @@ const DishDescription = ({ dish, index }) => {
 
 					</dl>
 				</div>
-				<NavLink id="navigate-next" to={'/menu/' + (index + 1)}></NavLink>
+				<NavLink id="navigate-next" to={index == 19 ? '/menu/1' : '/menu/' + (index + 1)}></NavLink>
 			</div>
 			<div id="details-bottom-image"></div>
 		</section>
