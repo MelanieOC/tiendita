@@ -4,7 +4,9 @@ import {NavLink} from 'react-router-dom';
 import {changeAmount,emptyCart} from './Actions.js';
 
 const CheckoutOrder = ({ shoppingCart, total }) => {
+    
     const products = shoppingCart.map((product, index) => {
+        this.input=[];
         return (
             <tr key={index}>
                 <td>
@@ -17,11 +19,11 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <span className="k-widget k-numerictextbox">
                         <span className="k-numeric-wrap k-state-default">
                             <input type="number" className="k-formatted-value k-input"
-                                defaultValue={product.amount}
+                                defaultValue={product.amount.toFixed(2)}
                                 style={{ display: 'inline-block' }} 
-                                ref={(e) => this.input = e}
+                                ref={(e) => this.input[index] = e}
                                 min='0'
-                                onChange={()=>{this.input.value?changeAmount(product.dish, this.input.value):''}}/>
+                                onChange={()=>{this.input[index].value?changeAmount(product.dish, this.input[index].value):''}}/>
                         </span>
                     </span>
                 </td>
