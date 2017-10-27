@@ -20,14 +20,11 @@
     width: 100px;
     background: #000 ;
 }
-.oculto{
-    display: none;
 
-}
 #navigate-prev:hover{
     background: #d60041;
 }
-#navigate-prev:hover .oculto{
+#navigate-prev .oculto{
     display:block;
     position: relative;
     top: 78px;
@@ -180,7 +177,7 @@ dl {
 #navigate-next:hover{
     background: #d60041 ;
 }
-#navigate-next:hover .oculto{
+#navigate-next .oculto{
     display:block;
     position: relative;
     top: 78px;

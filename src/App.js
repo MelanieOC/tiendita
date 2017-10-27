@@ -61,7 +61,6 @@ const App = ({ allDish }) => {
 
   );
 }
-//<Body component={<CheckoutOrder shoppingCart={shoppingCart} total={total} />}} />
 
 const mapToProps = ({ allDish }) => ({ allDish });
 export default connect(mapToProps)(App);

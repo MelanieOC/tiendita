@@ -36,9 +36,9 @@ export const Order = ({ shoppingCart, total }) => {
                     <a id="empty-cart" href="#" onClick={() => {emptyCart()}} >empty cart</a>
                     <NavLink id="checkout" to="/checkout">checkout</NavLink>
                 </div>
+                </div>
             }
         </div>
-
     );
 }
 

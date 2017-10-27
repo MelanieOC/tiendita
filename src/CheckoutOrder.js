@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CheckoutOrder.css';
 import {NavLink} from 'react-router-dom';
-import {changeAmount} from './Action.js';
+import {changeAmount,emptyCart} from './Actions.js';
 
 const CheckoutOrder = ({ shoppingCart, total }) => {
     const products = shoppingCart.map((product, index) => {
@@ -50,8 +50,8 @@ const CheckoutOrder = ({ shoppingCart, total }) => {
                     <em>total:</em>
                     <span>${total.toFixed(2)}</span>
                 </p>
-                <NavLink className="cancel-order" to='/'>cancel order</NavLink>
-                <NavLink className="order-now" to='/'>order now!</NavLink>
+                <NavLink className="cancel-order" to='/' onClick={emptyCart}>cancel order</NavLink>
+                <NavLink className="order-now" to='/' onClick={emptyCart}>order now!</NavLink>
             </div>
             <div id="checkout-bottom-image" />
         </div>
